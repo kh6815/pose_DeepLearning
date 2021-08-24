@@ -2,7 +2,7 @@
 해당 프로젝트는 **"딥러닝을 통한 인스타그램 해시태그 추천 및 사진 분류 웹사이트 구현"** 으로 python deeplearning에 대한 깃헙 주소입니다.
 
 Java/Spring 깃헙 주소는 해당 주소를 참고해주세요.
- - https://github.com/kh6815/pose_DeepLearning
+ - https://github.com/kh6815/pose
 
 전체적인 동작 구현 영상은 유튜브를 참고해주세요.
  - https://www.youtube.com/watch?v=wnqB6Vz1_Cg
@@ -26,3 +26,12 @@ DRN 모델은 정확도가 73%로 교육시킨 사진의 양에 비해 높은 �
  - 프레임워크 : Spring Framework 
  - IDE : IntelliJ, Visal Studio Code, Pycharm 
  - 딥러닝 모델 : DRN 모델
+
+
+## DRN (= Dilated Residual Network)
+  ### 합성곱
+   ![합성곱](https://user-images.githubusercontent.com/62634760/130573506-05457bde-f5d1-433a-9bae-6111d8976ece.PNG)
+    
+    - 표준 합성곱은 위의 Figure 4와 같이 입력 (3 x 3) 영역의 합성곱 필터에서 필터간의 간격이 1인 상태로 지정된 간격을 순회하며 채널별로 합성곱을 하고 모든 채널의 합성곱의 합으로 특징 지도를 만든다. 
+    그러나 확장된 합성곱의 경우 표준 합성곱과 동일한 방식이긴 하지만 Figure 5,6과 같이 입력 (7 x 7) 영역에서 필터간의 간격을 2인 상태로, 입력 (15 x 15) 영역에서 필터간의 간격을 4인 상태로 수신필드를 넓힐수 있다. 따라서 표준 합성곱보다 확장된 합성곱의 필터가 더 넓은 범위를 사용할 수 있다
+ 
